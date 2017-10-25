@@ -12,6 +12,9 @@ nav{
     background-color: #333;
     width: 100%;
   }
+  button{
+      width: 100%;
+  }
   
 .menu a {
     float: right;
@@ -72,11 +75,13 @@ nav a:hover {
       display: block;
       text-align: left;
     }
-    
+
     [class*="col-"] {
-        float: left;
-        padding: 15px;
+       width: 100%;
+       float: left;
+       padding: 10px;
     }
+    @media screen and (min-width: 600px){
     .col-1 {width: 8.33%;}
     .col-2 {width: 16.66%;}
     .col-3 {width: 25%;}
@@ -89,3 +94,29 @@ nav a:hover {
     .col-10 {width: 83.33%;}
     .col-11 {width: 91.66%;}
     .col-12 {width: 100%;}
+}
+@media screen and (max-width: 600px){
+    
+    .menu a{
+        display: none;
+    }
+    
+    .menu a.icon{
+        display: block;
+    }
+    .menu.responsive{
+        position: relative;
+        float: none;
+    }
+    .menu.responsive .icon{
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+footer, footer>a{
+    background-color: black;
+    color: white;
+    text-align: center;
+
+}
